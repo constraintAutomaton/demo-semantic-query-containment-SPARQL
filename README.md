@@ -2,6 +2,37 @@
 
 This repository demonstrates how the semantics of SPARQL queries—specifically the distinction between bag and set semantics—affects query containment. It utilizes [speCS](https://github.com/mirkospasic/SpeCS) as a solver.
 
+## Output of the demo
+
+```sh
+result sub query: {
+  "s": "http://example.org/josette",
+  "age": "\"25\"^^http://www.w3.org/2001/XMLSchema#integer"
+},{
+  "s": "http://example.org/josette",
+  "age": "\"25\"^^http://www.w3.org/2001/XMLSchema#integer"
+},{
+  "s": "http://example.org/jos",
+  "age": "\"30\"^^http://www.w3.org/2001/XMLSchema#integer"
+}
+---
+result super query: {
+  "s": "http://example.org/jan",
+  "age": "\"16\"^^http://www.w3.org/2001/XMLSchema#integer"
+},{
+  "s": "http://example.org/josette",
+  "age": "\"25\"^^http://www.w3.org/2001/XMLSchema#integer"
+},{
+  "s": "http://example.org/jos",
+  "age": "\"30\"^^http://www.w3.org/2001/XMLSchema#integer"
+}
+
+
+press any button ...
+
+SpeCS assume set semantic and say ...
+> the sub query is contained in the super query
+```
 ## Dependencies
 
 Ensure the following dependencies are installed before running the demo:
