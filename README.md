@@ -1,36 +1,28 @@
-# federated_queries_semantic
+# demo-wrong-semantic-query-containment-specs
 
-- (exp_1) In a federated settings we get a bag for duplicate values in the datasets because we suppose a union of bag and not a union of set.
+This repository demonstrates how the semantics of SPARQL queries—specifically the distinction between bag and set semantics—affects query containment. It utilizes [speCS](https://github.com/mirkospasic/SpeCS) as a solver.
 
-```json
-{
-  federatedResults: [
-    '{\n' +
-      '  "p": "http://example.com/duplicateP1",\n' +
-      '  "o": "http://example.com/duplicateO1"\n' +
-      '}',
-    '{\n' +
-      '  "p": "http://example.com/duplicateP1",\n' +
-      '  "o": "http://example.com/duplicateO1"\n' +
-      '}'
-  ],
-  singleResults: [
-    '{\n' +
-      '  "p": "http://example.com/duplicateP1",\n' +
-      '  "o": "http://example.com/duplicateO1"\n' +
-      '}'
-  ]
-}
+## Dependencies
+
+Ensure the following dependencies are installed before running the demo:
+
+### General Dependencies
+- [Yarn v1.22.22](https://classic.yarnpkg.com/lang/en/)
+- [Node.js v20](https://nodejs.org/en)
+
+### SpeCS Dependencies
+- [Make](https://www.gnu.org/software/make/)
+- [G++](https://gcc.gnu.org/)
+- [Flex](https://github.com/westes/flex)
+- [Bison](https://www.gnu.org/software/bison/)
+- [Z3 Theorem Prover](https://github.com/Z3Prover/z3)
+
+## Running the Demo
+
+Once all dependencies are installed, execute the following command:
+
+```sh
+./experiment.sh
 ```
 
-- (exp_2) There can be a query that is contained in single endpoint (set semantic database) and not in federated endpoint (bag semantic)
-
-```json
-{
-  federatedResults: [
-    '{\n  "p": "http://example.com/duplicateP3"\n}',
-    '{\n  "p": "http://example.com/duplicateP3"\n}'
-  ],
-  singleResults: [ '{\n  "p": "http://example.com/duplicateP3"\n}' ]
-}
-```
+This script will automatically run the demo.
