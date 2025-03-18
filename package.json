@@ -1,4 +1,8 @@
 {
   "name": "federated_queries_semantic",
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "dependencies": {
+    "@comunica/query-sparql": "^4.1.0",
+    "@comunica/query-sparql-file": "^4.1.0"
+  }
 }

@@ -1,0 +1,3 @@
+[submodule "SpeCS"]
+	path = SpeCS
+	url = https://github.com/mirkospasic/SpeCS.git
