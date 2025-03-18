@@ -32,5 +32,5 @@ echo >> queries
 echo "subquery:" >> queries
 cat ./superQuery.rq >> queries
 
-echo "SpeCS assume set semantic and say ..."
+echo "SpeCS assume set semantic and says ..."
 ./SpeCS/src/specs -file ./queries -qc | grep -q "^sat" && echo "> the sub query is contained in the super query" || echo "> the sub query is not contained in the super query"
