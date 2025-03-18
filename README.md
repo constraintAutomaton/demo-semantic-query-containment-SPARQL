@@ -70,9 +70,11 @@ press any button ...
 SpeCS assume set semantic and say ...
 > the sub query is contained in the super query
 ```
-
-When executing the queries, Josette appears twice in the sub query because she had two jobs, whereas she appears only once in the super query.
-As a result, the output of the superquery is not a subset of the subquery’s output. Therefore, the subquery is not contained within the superquery.
+We expect the subquery to be contained within the superquery because it is more restrictive, 
+it requires the person to have a job and be older than 16 years, whereas the superquery only considers the person's age.
+However, when executing the queries, Josette appears twice in the subquery because she had two jobs, whereas she appears only once in the superquery.
+As a result, the output of the superquery is not a subset of the subquery’s output, meaning the subquery is not contained within the superquery.
+This demonstrates how SPARQL’s bag semantics, despite triple stores being set semantic, have a significant impact on query containment and must be carefully considered in real-world applications.
 
 ## Dependencies
 
