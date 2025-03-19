@@ -40,4 +40,4 @@ for await (const binding of bindingStreamSuperQuery) {
     resultsSuperQuery.push(JSON.stringify(JSON.parse(binding.toString()), null, 2));
 }
 
-  console.log(`result sub query: ${resultSubQuery}\n---\nresult super query: ${resultsSuperQuery}`);
+  console.log(`result subquery: ${resultSubQuery}\n---\nresult superquery: ${resultsSuperQuery}`);
