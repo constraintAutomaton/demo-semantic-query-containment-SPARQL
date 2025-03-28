@@ -1,4 +1,4 @@
-yarn install > /dev/null
+bun install > /dev/null
 
 if ! pushd ./SpeCS/src > /dev/null; then
   echo "Make sure the submodule is installed"
@@ -15,7 +15,7 @@ clear
 
 popd > /dev/null
 
-yarn node index.mjs
+bun run index.mjs
 
 echo
 echo
