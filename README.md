@@ -1,4 +1,4 @@
-# demo-wrong-semantic-query-containment-specs
+# demo-semantic-query-containment-SPARQL
 
 This repository demonstrates how the semantics of SPARQL queries—specifically the distinction between bag and set semantics—affects query containment. It utilizes [speCS](https://github.com/mirkospasic/SpeCS) as a solver.
 The demo is inspired by example 1 of the paper [Query containment under bag and bag-set semantics (Foto N. Afrati; Matthew Damigos; Manolis Gergatsoulis, 2010)
