@@ -102,3 +102,6 @@ Once all dependencies are installed, execute the following command:
 ```
 
 This script will automatically run the demo.
+
+## License
+The code is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.

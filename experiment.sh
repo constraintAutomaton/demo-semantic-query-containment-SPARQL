@@ -42,12 +42,13 @@ read
 
 # This is to use SpeCS, also it seems like there is a bug where the super and the sub query are inverted
 echo "superquery:" > queries
-cat ./subQuery.rq >> queries
+cat ./superQuery.rq >> queries
 echo >> queries
 echo >> queries
 echo >> queries
 echo "subquery:" >> queries
-cat ./superQuery.rq >> queries
+cat ./subQuery.rq >> queries
+
 
 echo "SpeCS assume set semantic and says ..."
-./SpeCS/src/specs -file ./queries -qc | grep -q "^sat" && echo "> the sub query is contained in the super query" || echo "> the sub query is not contained in the super query"
+./SpeCS/src/specs -file ./queries -qc | grep -q "^unsat" && echo "> the sub query is contained in the super query" || echo "> the sub query is not contained in the super query"
